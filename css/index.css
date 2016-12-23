@@ -29,6 +29,7 @@ h4 {
   display: flex;
   flex-flow: column;
   position: relative;
+  text-align: center;
 }
 .top {
   margin: 0 auto;
@@ -258,7 +259,7 @@ h4 {
   -o-filter: blur(50px);
   -ms-filter: blur(50px);
   filter: blur(50px);
-  position: absolute;
+  position: fixed;
   top: -100px;
   left: -100px;
   right: -100px;

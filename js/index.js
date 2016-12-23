@@ -1,5 +1,12 @@
 window.onload = function() {
   var charBox, charContents, menu, selectedChar, toggleButton;
+  smoothScroll.init({
+    selector: '[data-scroll]',
+    selectorHeader: null,
+    speed: 500,
+    easing: 'easeInOutCubic',
+    offset: 0
+  });
   menu = document.querySelector(".menu-bar");
   toggleButton = document.querySelector("#toggleButton");
   toggleButton.addEventListener("click", function(e) {
