@@ -4,7 +4,7 @@ window.onload = ->
     selectorHeader: null,
     speed: 500,
     easing: 'easeInOutCubic',
-    offset: 0
+    offset: 50
   menu = document.querySelector ".menu-bar"
   toggleButton = document.querySelector "#toggleButton"
   toggleButton.addEventListener "click", (e) ->

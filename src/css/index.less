@@ -1,4 +1,4 @@
-@mainColor: fade(#160f69, 50%);
+@mainColor: fade(#160f69, 60%);
 @baseColor: #eeeeee;
 
 @resWidth: 48em;
@@ -31,7 +31,7 @@ h1, h2, h3, h4 {
 .container {
   min-height: 100%;
   width: 100%;
-  padding: @menuHeight 0 50px 0;
+  padding: @menuHeight * 1.5 0 50px 0;
   display: flex;
   flex-flow: column;
   position: relative;
@@ -93,6 +93,7 @@ h1, h2, h3, h4 {
   height: auto;
   padding: 2em 0;
   position: relative;
+  .transition(all, 1s);
 }
 .char-content {
   width: 100%;
