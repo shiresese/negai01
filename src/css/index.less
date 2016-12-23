@@ -1,0 +1,272 @@
+@mainColor: fade(#160f69, 50%);
+@baseColor: #eeeeee;
+
+@resWidth: 48em;
+@menuHeight: 50px;
+@menuItemWidth: 10em;
+@briValue: 1.2;
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282828;
+}
+a {
+  text-decoration: none;
+  color: @baseColor;
+}
+li {
+  display: block;
+}
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  padding: @menuHeight 0 50px 0;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  text-align: center;
+}
+
+.top {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.page {
+  background-color: fade(#000000, 50%);
+  color: @baseColor;
+  font-size: 14px;
+  width: calc(~"90% - 2em");
+  max-width: 40em;
+  min-width: 6em;
+  height: auto;
+  padding: 1em;
+  margin: 1em auto;
+  text-align: center;
+  z-index: 133;
+  .transition(height, 250ms);
+}
+
+.footer {
+  padding-top: 2em;
+  margin: 0 auto;
+}
+
+.char-list {
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  margin: 0;
+}
+.char-item {
+  margin: 0 auto;
+  width: 96px;
+  .transition(all, 250ms);
+}
+.char-item:hover {
+  -webkit-filter: brightness(@briValue);
+  -moz-filter: brightness(@briValue);
+  -o-filter: brightness(@briValue);
+  -ms-filter: brightness(@briValue);
+  filter: brightness(@briValue);
+}
+.char-item img {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+.char-box {
+  width: calc(~'100%');
+  height: auto;
+  padding: 2em 0;
+  position: relative;
+}
+.char-content {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: wrap;
+  opacity: 0;
+  z-index: 13;
+  .transition(all, 1s);
+}
+.char-selected {
+  z-index: 133;
+  opacity: 1;
+}
+.char-name {
+  margin: 0 auto;
+  width: 100%;
+}
+.char-img, .char-desc {
+  margin: 0 auto;
+  width: 50%;
+  @media(max-width: @resWidth) {
+    width: 100%;
+  }
+}
+.char-desc {
+  text-align: left;
+  @media(max-width: @resWidth) {
+    text-align: center;
+  }
+}
+.char-img {
+  padding: 1em 0;
+}
+.char-img img {
+  margin: 0 auto;
+}
+
+.info-env {
+  margin: 0 auto;
+  text-align: left;
+}
+.info-env td {
+  padding: 0 1em;
+}
+
+.menu-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: @menuHeight;
+  // background-color: @mainColor;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
+  color: @baseColor;
+  z-index: 1333;
+  .transition(height, 250ms);
+}
+.menu-title {
+  background-color: @mainColor;
+  vertical-align: middle;
+  width: @menuItemWidth * 1.5;
+  height: 100%;
+  text-align: center;
+  line-height: @menuHeight;
+  .transition(opacity, 250ms);
+}
+.menu-blank {
+  background-color: @mainColor;
+  width: calc(~'100%' - @menuItemWidth*4.5);
+  height: 100%;
+}
+.menu-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+}
+.menu-item {
+  background-color: @mainColor;
+  vertical-align: middle;
+  width: @menuItemWidth;
+  height: 100%;
+  text-align: center;
+  opacity: 1;
+  .transition(filter, 250ms);
+}
+.menu-item:hover, .menu-title:hover, .menu-toggle-button:hover {
+  // opacity: 0.8;
+  -webkit-filter: brightness(@briValue);
+  -moz-filter: brightness(@briValue);
+  -o-filter: brightness(@briValue);
+  -ms-filter: brightness(@briValue);
+  filter: brightness(@briValue);
+}
+.menu-link {
+  display: block;
+  line-height: @menuHeight;
+  height: 100%;
+  width: 100%;
+}
+.menu-toggle-button {
+  display: none;
+  height: @menuHeight;
+  width: 100%;
+  text-align: center;
+  line-height: @menuHeight;
+  background-color: @mainColor;
+  cursor: pointer;
+}
+.open {
+  height: @menuHeight * 4;
+}
+@media (max-width: @resWidth){
+  .menu-bar, .menu-list {
+    flex-flow: column;
+  }
+  .menu-item {
+    width: 100%;
+    height: @menuHeight;
+  }
+  .menu-title {
+    display: none;
+  }
+  .menu-blank {
+    display: none;
+  }
+  .menu-toggle-button {
+    display: block;
+  }
+}
+
+@blurValue: 50px;
+.bg-img {
+  background: url("../img/bg.png") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  position: fixed;
+  z-index: -26;
+  width: calc(~'100% + '@blurValue * 4);
+  height: calc(~'100% + '@blurValue * 4);
+  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+  top: -@blurValue*2;
+  left: -@blurValue*2;
+  right: -@blurValue*2;
+  bottom: -@blurValue*2;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.bg-img::before {
+  content: '';
+  background: inherit;/*.bgImageで設定した背景画像を継承する*/
+  -webkit-filter: blur(@blurValue);
+  -moz-filter: blur(@blurValue);
+  -o-filter: blur(@blurValue);
+  -ms-filter: blur(@blurValue);
+  filter: blur(@blurValue);
+  position: fixed;
+  top: -@blurValue*2;
+  left: -@blurValue*2;
+  right: -@blurValue*2;
+  bottom: -@blurValue*2;
+  z-index: -13;/*重なり順序を一番下にしておく*/
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.transition(@target: all, @ms: 500ms) {
+  transition-property: @target;
+  transition-duration: @ms;
+  transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}

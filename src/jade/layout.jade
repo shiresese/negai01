@@ -1,0 +1,23 @@
+doctype html
+mixin js(path)
+  script(type='text/javascript', src="."+path)
+mixin js_async(path)
+  script(type='text/javascript', src="."+path, async='async')
+mixin css(path)
+  link(rel='stylesheet', href="."+path)
+mixin template(id)
+  script(id=id, type="text/x-jquery-tmpl")
+html(lang='ja')
+  head
+    title 未完成の「ねがいごと」
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- link(rel="stylesheet", href="https://unpkg.com/purecss@0.6.1/build/pure-min.css", integrity="sha384-CCTZv2q9I9m3UOxRLaJneXrrqKwUNOzZ6NGEUMwHtShDJ+nCoiXJCAgi05KfkLGY", crossorigin="anonymous")
+    //- link(rel="stylesheet", href="https://unpkg.com/purecss@0.6.1/build/grids-responsive-min.css")
+    +css('/css/index.css')
+    block header
+  body
+    .js-loader
+      block loadFiles
+    block contents
