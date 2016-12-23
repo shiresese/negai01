@@ -233,7 +233,7 @@ h4 {
   }
 }
 .bg-img {
-  background: url("../img/bg.png") no-repeat center fixed;
+  background: url("../img/bg.png") no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
   overflow: hidden;
