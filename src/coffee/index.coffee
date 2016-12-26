@@ -9,16 +9,16 @@ window.onload = ->
   toggleButton = document.querySelector "#toggleButton"
   toggleButton.addEventListener "click", (e) ->
     menu.classList.toggle("open")
-  (document.querySelectorAll ".menu-item").forEach (item) ->
+  Array.prototype.forEach.call document.querySelectorAll(".menu-item"), (item) ->
     item.addEventListener "click", (e) ->
       menu.classList.remove("open")
 
   charBox = document.querySelector ".char-box"
   charContents = document.querySelectorAll ".char-content"
-  (document.querySelectorAll ".char-item").forEach (item) ->
+  Array.prototype.forEach.call document.querySelectorAll(".char-item"), (item) ->
     item.addEventListener "click", (e) ->
       height = 0
-      charContents.forEach (cc) ->
+      Array.prototype.forEach.call charContents, (cc) ->
         console.log cc.id, item.id
         if cc.id is item.id
           cc.classList.add "char-selected"
