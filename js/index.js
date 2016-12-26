@@ -36,6 +36,12 @@ window.onload = function() {
     });
   });
   selectedChar = document.querySelector(".char-selected");
-  console.log(selectedChar, selectedChar.clientHeight);
+  return charBox.style["height"] = selectedChar.clientHeight + "px";
+};
+
+window.onresize = function() {
+  var charBox, selectedChar;
+  selectedChar = document.querySelector(".char-selected");
+  charBox = document.querySelector(".char-box");
   return charBox.style["height"] = selectedChar.clientHeight + "px";
 };
