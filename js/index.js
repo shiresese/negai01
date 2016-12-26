@@ -12,18 +12,18 @@ window.onload = function() {
   toggleButton.addEventListener("click", function(e) {
     return menu.classList.toggle("open");
   });
-  (document.querySelectorAll(".menu-item")).forEach(function(item) {
+  Array.prototype.forEach.call(document.querySelectorAll(".menu-item"), function(item) {
     return item.addEventListener("click", function(e) {
       return menu.classList.remove("open");
     });
   });
   charBox = document.querySelector(".char-box");
   charContents = document.querySelectorAll(".char-content");
-  (document.querySelectorAll(".char-item")).forEach(function(item) {
+  Array.prototype.forEach.call(document.querySelectorAll(".char-item"), function(item) {
     return item.addEventListener("click", function(e) {
       var height;
       height = 0;
-      charContents.forEach(function(cc) {
+      Array.prototype.forEach.call(charContents, function(cc) {
         console.log(cc.id, item.id);
         if (cc.id === item.id) {
           cc.classList.add("char-selected");
