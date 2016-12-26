@@ -181,6 +181,9 @@ h2,
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
+.menu-logo {
+  height: 50px;
+}
 .menu-title {
   background-color: rgba(4, 26, 83, 0.6);
   vertical-align: middle;
