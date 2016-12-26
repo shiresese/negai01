@@ -43,6 +43,7 @@ h2,
 }
 .top {
   margin: 0 auto;
+  margin-bottom: 1em;
   overflow: hidden;
 }
 .top img {
@@ -58,7 +59,8 @@ h2,
   min-width: 6em;
   height: auto;
   padding: 1em;
-  margin: 1em auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
   text-align: center;
   z-index: 133;
   transition-property: height;
@@ -66,7 +68,6 @@ h2,
   transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
 .footer {
-  padding-top: 2em;
   margin: 0 auto;
 }
 .char-list {
