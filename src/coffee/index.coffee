@@ -28,5 +28,9 @@ window.onload = ->
       charBox.style["height"] = "#{height}px"
 
   selectedChar = document.querySelector ".char-selected"
-  console.log selectedChar, selectedChar.clientHeight
+  charBox.style["height"] = "#{selectedChar.clientHeight}px"
+
+window.onresize = ->
+  selectedChar = document.querySelector ".char-selected"
+  charBox = document.querySelector ".char-box"
   charBox.style["height"] = "#{selectedChar.clientHeight}px"
