@@ -24,7 +24,6 @@ window.onload = function() {
       var height;
       height = 0;
       Array.prototype.forEach.call(charContents, function(cc) {
-        console.log(cc.id, item.id);
         if (cc.id === item.id) {
           cc.classList.add("char-selected");
           return height = cc.clientHeight;
