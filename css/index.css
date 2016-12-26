@@ -8,6 +8,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #282828;
+  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "HiraMinProN-W3", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", serif;
 }
 a {
   text-decoration: none;
@@ -22,10 +23,19 @@ h3,
 h4 {
   font-weight: normal;
 }
+h1,
+h2,
+.menu-link {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
+}
+.bold {
+  font-weight: bold;
+  font-size: 16px;
+}
 .container {
   min-height: 100%;
   width: 100%;
-  padding: 75px 0 50px 0;
+  padding: 50px 0 50px 0;
   display: flex;
   flex-flow: column;
   position: relative;
@@ -34,6 +44,10 @@ h4 {
 .top {
   margin: 0 auto;
   overflow: hidden;
+}
+.top img {
+  width: 100%;
+  max-width: 40em;
 }
 .page {
   background-color: rgba(0, 0, 0, 0.5);
@@ -121,6 +135,15 @@ h4 {
     width: 100%;
   }
 }
+.char-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.char-img img {
+  height: 370px;
+}
 .char-desc {
   text-align: left;
 }
@@ -141,6 +164,7 @@ h4 {
 }
 .info-env td {
   padding: 0 1em;
+  min-width: 3em;
 }
 .menu-bar {
   position: fixed;
@@ -157,7 +181,7 @@ h4 {
   transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
 .menu-title {
-  background-color: rgba(22, 15, 105, 0.6);
+  background-color: rgba(4, 26, 83, 0.6);
   vertical-align: middle;
   width: 15em;
   height: 100%;
@@ -168,8 +192,8 @@ h4 {
   transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
 .menu-blank {
-  background-color: rgba(22, 15, 105, 0.6);
-  width: calc(100% - 45em);
+  background-color: rgba(4, 26, 83, 0.6);
+  width: calc(100% - 55em);
   height: 100%;
 }
 .menu-list {
@@ -179,7 +203,7 @@ h4 {
   flex-flow: row;
 }
 .menu-item {
-  background-color: rgba(22, 15, 105, 0.6);
+  background-color: rgba(4, 26, 83, 0.6);
   vertical-align: middle;
   width: 10em;
   height: 100%;
@@ -210,11 +234,11 @@ h4 {
   width: 100%;
   text-align: center;
   line-height: 50px;
-  background-color: rgba(22, 15, 105, 0.6);
+  background-color: rgba(4, 26, 83, 0.6);
   cursor: pointer;
 }
 .open {
-  height: 200px;
+  height: 250px;
 }
 @media (max-width: 48em) {
   .menu-bar,
@@ -242,33 +266,8 @@ h4 {
   overflow: hidden;
   position: fixed;
   z-index: -26;
-  width: calc(100% +  200px);
-  height: calc(100% +  200px);
-  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
-  top: -100px;
-  left: -100px;
-  right: -100px;
-  bottom: -100px;
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  transform: scale(1.2);
-}
-.bg-img::before {
-  content: '';
-  background: inherit;
-  /*.bgImageで設定した背景画像を継承する*/
-  -webkit-filter: blur(50px);
-  -moz-filter: blur(50px);
-  -o-filter: blur(50px);
-  -ms-filter: blur(50px);
-  filter: blur(50px);
-  position: fixed;
-  top: -100px;
-  left: -100px;
-  right: -100px;
-  bottom: -100px;
-  z-index: -13;
-  /*重なり順序を一番下にしておく*/
+  width: 100%;
+  height: 100%;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   transform: scale(1.2);
