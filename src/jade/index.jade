@@ -5,8 +5,10 @@ block loadFiles
 block contents
   .menu-bar#data-scroll-header
     .menu-title
-      a(href="#" data-scroll) 未完成の「ねがいごと」
-    .menu-toggle-button#toggleButton 未完成の「ねがいごと」
+      a(href="#" data-scroll)
+        img(src="./img/logo.png")
+    .menu-toggle-button#toggleButton
+      img(src="./img/logo.png")
     ul.menu-list
       li.menu-item
         a.menu-link(href="#story" data-scroll) Story
@@ -14,6 +16,8 @@ block contents
         a.menu-link(href="#charactor" data-scroll) Charactor
       li.menu-item
         a.menu-link(href="#info" data-scroll) Information
+      li.menu-item
+        a.menu-link(href="#music" data-scroll) Music
     .menu-blank
   .bg-img
   .container
@@ -21,7 +25,21 @@ block contents
       img(src="./img/kv.png")
     .page#story
       h2 Story
-      p bbbb
+      p.bold 「そう、都市伝説。なんでも、ねがいをかなえてくれる「かみさま」がいる——んだって。結構話題になってるのさ」
+      br
+      //- p 主人公——ニノ森 二人には願い事があった。
+      //- p 幼少期に見たその願い事は、彼の一部として、もはや思考にあがることもなかった。
+      //- p しかし、彼は「かみさま」の存在を知った。
+      //- p「かみさま」——それは、「ねがいごと」を叶えてくれるという都市伝説。
+      //- p 彼はそんな「かみさま」に不信感を抱きつつも、徐々にその概念へと接近していく——。
+      p 主人公——ニノ森 二人には願い事があった。
+      p 幼少期に見たその願い事は、彼の一部として、
+      p もはや思考にあがることもなかった。
+      p しかし、彼は「かみさま」の存在を知った。
+      p 「かみさま」——それは、
+      p 「ねがいごと」を叶えてくれるという都市伝説。
+      p 彼はそんな「かみさま」に不信感を抱きつつも、
+      p 徐々にその概念へと接近していく——。
     .page#charactor
       h2 Charactor
       ul.char-list
@@ -35,64 +53,65 @@ block contents
       .char-box
         .char-content.char-selected#char01
           .char-name
-            h3 ニノ森 二人
+            h3 六花 夢見
           .char-img
             img(src="./img/char01.png")
           .char-desc
-            p 主人公。
-            p あああああああ。
-            p あああああ。
-            p あああああああ。
+            p 主人公の先輩にして幼馴染にして
+            p 姉的存在。
+            p 真っ白ファンキーな見た目だが、
+            p 極度の人見知り。
         .char-content#char02
           .char-name
-            h3 ニノ森 三人
+            h3 一ノ瀬 コトミ
           .char-img
             img(src="./img/char02.png")
           .char-desc
-            p ヒロイン。
-            p おおおおおおお。
-            p おおおおお。
+            p 主人公の同級生。
+            p 外国の血が混じっていたり、
+            p 混じっていなかったり。
+            p 態度は尖っているが、
+            p 心根は優しい芯の強い女の子。
         .char-content#char03
           .char-name
-            h3 ニノ森 四人
+            h3 ニノ森 二人
           .char-img
-            img(src="./img/char03.png")
+            //img(src="./img/char03.png")
           .char-desc
-            p クラスメイト。
-            p えええええええ。
-            p えええええ。
-            p えええええええ。
-            p えええええええ。
-            p えええええ。
-            p えええええええ。
+            p 主人公。
+            p 幼少期に抱いた願い事を、
+            p 現在も思考の中心に置いている。
     .page#info
       h2 Information
       h3 頒布情報
-      h4 イベント
+      h4 --- イベント ---
       p C91 2016/12/29 (1日目)
       p 西地区 の 07 b「しれせせ」
-      h4 内容
-      p ノベルゲーム
+      h4 --- 内容 ---
+      p 青春後退ビジュアルノベルゲーム
       p ボカロシングルCD
-      h4 価格
+      p ※一枚のディスクにノベルゲームと音楽CDが入っています。
+      h4 --- 価格 ---
       p ¥500
       h3 動作環境
       table.info-env
         tr
           td OS
-          td ***
-        tr
-          td CPU
-          td ***
+          td PC: Windos7 以降 / Mac: 10.7 以降
         tr
           td メモリ
-          td ***
+          td 2GB以上
         tr
-          td ビデオチップ
-          td ***
-        tr
-          td ビデオメモリ
-          td ***
+          td 解像度
+          td 800×600px
+    .page#music
+      h2 Music
+      p 同梱している音楽CDについて。
+      h3 Track list
+      p 1. ホワイトアウト
+      p 作曲 shire, 歌 IA(VOCALOID)
+      p 2. それはまるで、恋する少女のような。
+      p エンディング主題歌・作曲 shire, 歌 IA(VOCALOID)
     .footer
       a(href="http://shiresese.github.io/")
         img(src="./img/srss_wh.png")

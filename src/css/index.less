@@ -1,4 +1,4 @@
-@mainColor: fade(#160f69, 60%);
+@mainColor: fade(#041a53, 60%);
 @baseColor: #eeeeee;
 
 @resWidth: 48em;
@@ -16,6 +16,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #282828;
+  font-family: "ヒラギノ明朝 ProN","Hiragino Mincho ProN", "HiraMinProN-W3", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", serif;
 }
 a {
   text-decoration: none;
@@ -27,11 +28,18 @@ li {
 h1, h2, h3, h4 {
   font-weight: normal;
 }
+h1, h2, .menu-link {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
+}
+.bold {
+  font-weight: bold;
+  font-size: 16px;
+}
 
 .container {
   min-height: 100%;
   width: 100%;
-  padding: @menuHeight * 1.5 0 50px 0;
+  padding: @menuHeight 0 50px 0;
   display: flex;
   flex-flow: column;
   position: relative;
@@ -41,6 +49,11 @@ h1, h2, h3, h4 {
 .top {
   margin: 0 auto;
   overflow: hidden;
+}
+
+.top img {
+  width: 100%;
+  max-width: 40em;
 }
 
 .page {
@@ -119,6 +132,15 @@ h1, h2, h3, h4 {
     width: 100%;
   }
 }
+.char-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.char-img img {
+  height: 370px;
+}
 .char-desc {
   text-align: left;
   @media(max-width: @resWidth) {
@@ -138,6 +160,7 @@ h1, h2, h3, h4 {
 }
 .info-env td {
   padding: 0 1em;
+  min-width: 3em;
 }
 
 .menu-bar {
@@ -164,7 +187,7 @@ h1, h2, h3, h4 {
 }
 .menu-blank {
   background-color: @mainColor;
-  width: calc(~'100%' - @menuItemWidth*4.5);
+  width: calc(~'100%' - @menuItemWidth*5.5);
   height: 100%;
 }
 .menu-list {
@@ -206,7 +229,7 @@ h1, h2, h3, h4 {
   cursor: pointer;
 }
 .open {
-  height: @menuHeight * 4;
+  height: @menuHeight * 5;
 }
 @media (max-width: @resWidth){
   .menu-bar, .menu-list {
@@ -235,36 +258,31 @@ h1, h2, h3, h4 {
   overflow: hidden;
   position: fixed;
   z-index: -26;
-  width: calc(~'100% + '@blurValue * 4);
-  height: calc(~'100% + '@blurValue * 4);
-  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
-  top: -@blurValue*2;
-  left: -@blurValue*2;
-  right: -@blurValue*2;
-  bottom: -@blurValue*2;
+  width: 100%;
+  height: 100%;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   transform: scale(1.2);
 }
-
-.bg-img::before {
-  content: '';
-  background: inherit;/*.bgImageで設定した背景画像を継承する*/
-  -webkit-filter: blur(@blurValue);
-  -moz-filter: blur(@blurValue);
-  -o-filter: blur(@blurValue);
-  -ms-filter: blur(@blurValue);
-  filter: blur(@blurValue);
-  position: fixed;
-  top: -@blurValue*2;
-  left: -@blurValue*2;
-  right: -@blurValue*2;
-  bottom: -@blurValue*2;
-  z-index: -13;/*重なり順序を一番下にしておく*/
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  transform: scale(1.2);
-}
+//
+// .bg-img::before {
+//   content: '';
+//   background: inherit;/*.bgImageで設定した背景画像を継承する*/
+//   -webkit-filter: blur(@blurValue);
+//   -moz-filter: blur(@blurValue);
+//   -o-filter: blur(@blurValue);
+//   -ms-filter: blur(@blurValue);
+//   filter: blur(@blurValue);
+//   position: fixed;
+//   top: -@blurValue*2;
+//   left: -@blurValue*2;
+//   right: -@blurValue*2;
+//   bottom: -@blurValue*2;
+//   z-index: -13;/*重なり順序を一番下にしておく*/
+//   -webkit-transform: scale(1.2);
+//   -moz-transform: scale(1.2);
+//   transform: scale(1.2);
+// }
 
 .transition(@target: all, @ms: 500ms) {
   transition-property: @target;
