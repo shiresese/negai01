@@ -19,7 +19,6 @@ window.onload = ->
     item.addEventListener "click", (e) ->
       height = 0
       Array.prototype.forEach.call charContents, (cc) ->
-        console.log cc.id, item.id
         if cc.id is item.id
           cc.classList.add "char-selected"
           height = cc.clientHeight
