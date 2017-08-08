@@ -51,7 +51,7 @@ h2,
   max-width: 40em;
 }
 .page {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #eeeeee;
   font-size: 14px;
   width: calc(90% - 2em);
@@ -78,17 +78,17 @@ h2,
 }
 .char-item {
   margin: 0 auto;
-  width: 96px;
+  width: 121px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
   transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
 .char-item:hover {
-  -webkit-filter: brightness(1.1);
-  -moz-filter: brightness(1.1);
-  -o-filter: brightness(1.1);
-  -ms-filter: brightness(1.1);
-  filter: brightness(1.1);
+  box-shadow: 0 0 10px white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .char-item img {
   margin: 0 auto;
@@ -185,7 +185,7 @@ h2,
   height: 50px;
 }
 .menu-title {
-  background-color: rgba(4, 26, 83, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   vertical-align: middle;
   width: 15em;
   height: 100%;
@@ -196,7 +196,7 @@ h2,
   transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
 .menu-blank {
-  background-color: rgba(4, 26, 83, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   width: calc(100% - 55em);
   height: 100%;
 }
@@ -207,7 +207,7 @@ h2,
   flex-flow: row;
 }
 .menu-item {
-  background-color: rgba(4, 26, 83, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   vertical-align: middle;
   width: 10em;
   height: 100%;
@@ -220,11 +220,11 @@ h2,
 .menu-item:hover,
 .menu-title:hover,
 .menu-toggle-button:hover {
-  -webkit-filter: brightness(1.1);
-  -moz-filter: brightness(1.1);
-  -o-filter: brightness(1.1);
-  -ms-filter: brightness(1.1);
-  filter: brightness(1.1);
+  -webkit-filter: brightness(1.01);
+  -moz-filter: brightness(1.01);
+  -o-filter: brightness(1.01);
+  -ms-filter: brightness(1.01);
+  filter: brightness(1.01);
 }
 .menu-link {
   display: block;
@@ -238,7 +238,7 @@ h2,
   width: 100%;
   text-align: center;
   line-height: 50px;
-  background-color: rgba(4, 26, 83, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
 }
 .open {
@@ -263,8 +263,11 @@ h2,
     display: block;
   }
 }
+.body-link {
+  text-decoration: underline;
+}
 .bg-img {
-  background: url("../img/bg.png") no-repeat center;
+  background: url("../img/bg02.png") no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
   overflow: hidden;
