@@ -1,10 +1,10 @@
-@mainColor: fade(#041a53, 60%);
+@mainColor: fade(#000000, 70%);
 @baseColor: #eeeeee;
 
 @resWidth: 48em;
 @menuHeight: 50px;
 @menuItemWidth: 10em;
-@briValue: 1.1;
+@briValue: 1.01;
 
 html {
   width: 100%;
@@ -58,7 +58,7 @@ h1, h2, .menu-link {
 }
 
 .page {
-  background-color: fade(#000000, 50%);
+  background-color: fade(#000000, 60%);
   color: @baseColor;
   font-size: 14px;
   width: calc(~"90% - 2em");
@@ -86,15 +86,20 @@ h1, h2, .menu-link {
 }
 .char-item {
   margin: 0 auto;
-  width: 96px;
+  width: 121px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
   .transition(all, 250ms);
 }
 .char-item:hover {
-  -webkit-filter: brightness(@briValue);
-  -moz-filter: brightness(@briValue);
-  -o-filter: brightness(@briValue);
-  -ms-filter: brightness(@briValue);
-  filter: brightness(@briValue);
+  // -webkit-filter: brightness(@briValue);
+  // -moz-filter: brightness(@briValue);
+  // -o-filter: brightness(@briValue);
+  // -ms-filter: brightness(@briValue);
+  // filter: brightness(@briValue);
+  box-shadow: 0 0 10px white;
+  background-color: fade(white, 10%);
 }
 .char-item img {
   margin: 0 auto;
@@ -255,9 +260,13 @@ h1, h2, .menu-link {
   }
 }
 
+.body-link {
+  text-decoration: underline;
+}
+
 @blurValue: 50px;
 .bg-img {
-  background: url("../img/bg.png") no-repeat center;
+  background: url("../img/bg02.png") no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
   overflow: hidden;
